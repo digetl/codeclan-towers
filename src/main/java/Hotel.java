@@ -40,4 +40,8 @@ public class Hotel {
         conferenceRoom.removeGuest(guest);
     }
 
+    public Booking bookRoom(int nights, Bedroom bedroom) {
+        return new Booking(nights, bedroom);
+    }
+
 }
