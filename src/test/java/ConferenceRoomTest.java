@@ -52,6 +52,12 @@ public class ConferenceRoomTest {
     }
 
     @Test
+    public void canAddGuest() {
+        conferenceRoom.addGuest(guest1);
+        assertEquals(1, conferenceRoom.countGuests());
+    }
+
+    @Test
     public void cantAddGuestIfRoomFull() {
         conferenceRoom.addGuest(guest1);
         conferenceRoom.addGuest(guest2);
