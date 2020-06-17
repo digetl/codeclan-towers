@@ -22,4 +22,10 @@ public class BookingTest {
     public void hasBedroom() {
         assertEquals(bedroom, booking.getBedroom());
     }
+
+    @Test
+    public void canGetBill() {
+        assertEquals(100, booking.getBill());
+    }
+
 }
