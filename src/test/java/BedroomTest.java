@@ -1,7 +1,7 @@
 import org.junit.Before;
 import org.junit.Test;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.*;
 
 public class BedroomTest {
 
@@ -41,4 +41,18 @@ public class BedroomTest {
         bedroom.addGuest(guest1);
         assertEquals(1, bedroom.countGuests());
     }
+
+    @Test
+    public void canCheckIfFull__true() {
+        bedroom.addGuest(guest1);
+        bedroom.addGuest(guest2);
+        assertTrue(bedroom.isFull());
+    }
+
+    @Test
+    public void canCheckIfFull__false() {
+        bedroom.addGuest(guest1);
+        assertFalse(bedroom.isFull());
+    }
+
 }

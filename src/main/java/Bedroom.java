@@ -32,4 +32,8 @@ public class Bedroom {
     public void addGuest(Guest guest) {
         guests.add(guest);
     }
+
+    public boolean isFull() {
+        return countGuests() == getCapacity();
+    }
 }
