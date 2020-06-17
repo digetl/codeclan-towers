@@ -42,7 +42,12 @@ public class HotelTest {
     }
 
     @Test
-    public void hasName() {
-        assertEquals("The Grand Budapest Hotel", hotel.getName());
+    public void hasBedrooms() {
+        assertEquals(bedrooms, hotel.getBedrooms());
+    }
+
+    @Test
+    public void hasConferenceRooms() {
+        assertEquals(conferenceRooms, hotel.getConferenceRooms());
     }
 }
