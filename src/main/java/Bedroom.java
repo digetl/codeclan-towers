@@ -39,6 +39,7 @@ public class Bedroom {
         }
     }
 
+
     public void removeGuest(Guest guest) {
         if (guests.contains(guest)) {
             guests.remove(guest);
