@@ -8,12 +8,14 @@ public class BedroomTest {
     private Bedroom bedroom;
     private Guest guest1;
     private Guest guest2;
+    private Guest guest3;
 
     @Before
     public void before() {
         bedroom = new Bedroom("27", 2, "double");
         guest1 = new Guest("Iain");
         guest2 = new Guest("Gary");
+        guest3 = new Guest("Dave");
     }
 
     @Test
@@ -53,6 +55,14 @@ public class BedroomTest {
     public void canCheckIfFull__false() {
         bedroom.addGuest(guest1);
         assertFalse(bedroom.isFull());
+    }
+
+    @Test
+    public void cantAddGuestIfRoomFull() {
+        bedroom.addGuest(guest1);
+        bedroom.addGuest(guest2);
+        bedroom.addGuest(guest3);
+        assertEquals(2, bedroom.countGuests());
     }
 
 }

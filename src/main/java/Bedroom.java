@@ -29,11 +29,13 @@ public class Bedroom {
         return guests.size();
     }
 
-    public void addGuest(Guest guest) {
-        guests.add(guest);
-    }
-
     public boolean isFull() {
         return countGuests() == getCapacity();
+    }
+
+    public void addGuest(Guest guest) {
+        if (!isFull()) {
+            guests.add(guest);
+        }
     }
 }
