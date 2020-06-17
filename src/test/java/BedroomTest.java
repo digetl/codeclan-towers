@@ -12,7 +12,7 @@ public class BedroomTest {
 
     @Test
     public void hasRoomName() {
-        assertEquals("27", bedroom.getRoomName());
+        assertEquals("27", bedroom.getName());
     }
 
     @Test
