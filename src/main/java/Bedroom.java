@@ -6,7 +6,7 @@ public class Bedroom {
     private String type;
     private ArrayList<Guest> guests;
 
-    public Bedroom(String roomName, int capacity, String type) {
+    public Bedroom(String name, int capacity, String type) {
         this.name = name;
         this.capacity = capacity;
         this.type = type;
@@ -14,7 +14,7 @@ public class Bedroom {
     }
 
     public String getName() {
-        return this.roomName;
+        return name;
     }
 
     public int getCapacity() {

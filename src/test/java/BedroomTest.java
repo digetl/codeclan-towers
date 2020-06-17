@@ -11,7 +11,7 @@ public class BedroomTest {
     public void before() { bedroom = new Bedroom("27", 2, "double"); }
 
     @Test
-    public void hasRoomName() {
+    public void hasName() {
         assertEquals("27", bedroom.getName());
     }
 
