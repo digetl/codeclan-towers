@@ -128,4 +128,11 @@ public class HotelTest {
         assertNull(booking);
     }
 
+    @Test
+    public void canGetVacantRooms() {
+        hotel.checkIn(bedroom1, guest1);
+        ArrayList<Bedroom> vacantRooms = hotel.getVacantRooms();
+        assertEquals(2, vacantRooms.size());
+    }
+
 }
