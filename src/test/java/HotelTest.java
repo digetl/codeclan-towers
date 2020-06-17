@@ -72,8 +72,13 @@ public class HotelTest {
     }
 
     @Test
-    public void canGetDiningRoomByName() {
+    public void canGetDiningRoomByName__success() {
         assertEquals(diningRoom1, hotel.getDiningRoomByName("Goulash Restaurant"));
+    }
+
+    @Test
+    public void canGetDiningRoomByName__failure() {
+        assertNull(hotel.getDiningRoomByName("Fish Bistro"));
     }
 
     @Test
