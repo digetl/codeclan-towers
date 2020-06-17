@@ -41,7 +41,10 @@ public class Hotel {
     }
 
     public Booking bookRoom(int nights, Bedroom bedroom) {
-        return new Booking(nights, bedroom);
+        if (nights > 0 && nights < 15) {
+            return new Booking(nights, bedroom);
+        }
+        return null;
     }
 
 }

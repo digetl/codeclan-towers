@@ -3,8 +3,7 @@ import org.junit.Test;
 
 import java.util.ArrayList;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
 public class HotelTest {
 
@@ -91,5 +90,17 @@ public class HotelTest {
         Booking booking = hotel.bookRoom(5, bedroom2);
         assertEquals(5, booking.getNights());
         assertEquals(bedroom2, booking.getBedroom());
+    }
+
+    @Test
+    public void cantBookRoomForLessThanOneNight() {
+        Booking booking = hotel.bookRoom(0, bedroom1);
+        assertNull(booking);
+    }
+
+    @Test
+    public void cantBookRoomForMoreThan14Nights() {
+        Booking booking = hotel.bookRoom(100, bedroom1);
+        assertNull(booking);
     }
 }
