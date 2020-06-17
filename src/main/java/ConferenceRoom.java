@@ -29,4 +29,20 @@ public class ConferenceRoom {
     public int countGuests() {
         return guests.size();
     }
+
+    public boolean isFull() {
+        return countGuests() == getCapacity();
+    }
+
+    public void addGuest(Guest guest) {
+        if (!isFull()) {
+            guests.add(guest);
+        }
+    }
+
+    public void removeGuest(Guest guest) {
+        if (guests.contains(guest)) {
+            guests.remove(guest);
+        }
+    }
 }
