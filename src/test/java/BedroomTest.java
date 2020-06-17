@@ -8,7 +8,7 @@ public class BedroomTest {
     private Bedroom bedroom;
 
     @Before
-    public void before() {bedroom = new Bedroom("27", 2, "double")};
+    public void before() { bedroom = new Bedroom("27", 2, "double"); }
 
     @Test
     public void hasRoomName() {

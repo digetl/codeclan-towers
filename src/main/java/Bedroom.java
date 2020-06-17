@@ -25,7 +25,7 @@ public class Bedroom {
         return type;
     }
 
-    public ArrayList<Guest> countGuests() {
-        return guests;
+    public int countGuests() {
+        return guests.size();
     }
 }
