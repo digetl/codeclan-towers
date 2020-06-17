@@ -38,4 +38,10 @@ public class Bedroom {
             guests.add(guest);
         }
     }
+
+    public void removeGuest(Guest guest) {
+        if (guests.contains(guest)) {
+            guests.remove(guest);
+        }
+    }
 }
