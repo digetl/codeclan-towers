@@ -22,9 +22,9 @@ public class HotelTest {
 
     @Before
     public void before() {
-        bedroom1 = new Bedroom("1", 1, "single");
-        bedroom2 = new Bedroom("2", 2, "double");
-        bedroom3 = new Bedroom("Honeymoon Suite", 2, "suite");
+        bedroom1 = new Bedroom("1", 1, "single", 5);
+        bedroom2 = new Bedroom("2", 2, "double", 10);
+        bedroom3 = new Bedroom("Honeymoon Suite", 2, "suite", 50);
         bedrooms = new ArrayList<Bedroom>();
         bedrooms.add(bedroom1);
         bedrooms.add(bedroom2);
@@ -103,4 +103,5 @@ public class HotelTest {
         Booking booking = hotel.bookRoom(100, bedroom1);
         assertNull(booking);
     }
+
 }
